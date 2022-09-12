@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
+import Minter from '../components/Minter'
 import Container from '../components/Layout/Container'
 import Card from '../components/Card'
 import Link from 'next/link'
@@ -38,7 +39,12 @@ const Home = () => {
       <Hero />
 
       <Container className="flex justify-center my-24">
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 md:gap-12">
+
+      {/* MINT TEST */}
+
+      <Minter/>
+
+        {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 md:gap-12">
           {links.map((link, index) => (
             <Link href={link.href} key={'link' + index} passHref>
               <a>
@@ -48,7 +54,7 @@ const Home = () => {
               </a>
             </Link>
           ))}
-        </div>
+        </div> */}
       </Container>
     </>
   )
