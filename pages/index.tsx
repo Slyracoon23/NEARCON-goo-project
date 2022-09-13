@@ -15,7 +15,9 @@ import {
   WalletConnection,
   Contract,
   ConnectedWalletAccount,
-  Near
+  Near,
+  keyStores,
+  connect
 } from 'near-api-js';
 
 import { initApiControl } from '@roketo/sdk';
@@ -143,14 +145,46 @@ const Home = () => {
 
   const handleClick = async () => {
     if (!isConnected) {
-      // await walletConnection.requestSignIn(roketoContractName, 'Feed-a-cat');
+      const keyStore = new keyStores.BrowserLocalStorageKeyStore();
+
+      const near = await connect({
+        nodeUrl: NEAR_CONSTANTS.nodeUrl,
+        walletUrl: NEAR_CONSTANTS.walletUrl,
+        networkId: NEAR_CONSTANTS.networkId,
+        keyStore,
+        headers: {},
+      });
+      const walletConnection = new WalletConnection(near, NEAR_CONSTANTS.roketoContractName);
+      const account = walletConnection.account();
+
+      setAccount(account);
+
+      await walletConnection.requestSignIn(NEAR_CONSTANTS.roketoContractName, 'Feed-a-cat');
+
+
       console.log("Not connected");
     } else {
       const fishTokenAccountId = 'fish.lebedev.testnet';
 
+      const keyStore = new keyStores.BrowserLocalStorageKeyStore();
+
+
+      const near = await connect({
+        nodeUrl: NEAR_CONSTANTS.nodeUrl,
+        walletUrl: NEAR_CONSTANTS.walletUrl,
+        networkId: NEAR_CONSTANTS.networkId,
+        keyStore,
+        headers: {},
+      });
+
+
       // @ts-ignore
-      const walletConnection = new WalletConnection(wallet?.activeNearConnection , NEAR_CONSTANTS.roketoContractName);
+      const walletConnection = new WalletConnection(near, NEAR_CONSTANTS.roketoContractName);
       const account = walletConnection.account();
+
+      // await walletConnection.requestSignIn(NEAR_CONSTANTS.roketoContractName, 'Feed-a-cat');
+
+      
 
       // setAccount(account);
 
@@ -168,6 +202,8 @@ const Home = () => {
        transactionMediator,
        roketoContractName: NEAR_CONSTANTS.roketoContractName,
      });
+
+
 
     //  setContract(contract);
 
