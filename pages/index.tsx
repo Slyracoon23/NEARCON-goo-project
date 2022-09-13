@@ -389,17 +389,15 @@ const Home = () => {
 
       {/* <Hero  image={NearCon}/> */}
 
+      <div className=" flex justify-center w-full  px-6 py-12 border-t">
+      <Container className="flex justify-center my-24">
+      <h1>TEST </h1>
+      </Container>
+      </div>
 
+  
 
-      <Container className="flex justify-center my-24">
-      <h1>TEST </h1>
-      </Container>
-      <Container className="flex justify-center my-24">
-      <h1>TEST </h1>
-      </Container>
-      <Container className="flex justify-center my-24">
-      <h1>TEST </h1>
-      </Container>
+      
       
     
       {/* <Container className="flex justify-center my-24">
