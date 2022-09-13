@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
 import Minter from '../components/Minter'
+import Streamer from '../components/Streamer'
 import Container from '../components/Layout/Container'
 import Card from '../components/Card'
 import Link from 'next/link'
@@ -391,7 +392,10 @@ const Home = () => {
 
       <div className=" flex justify-center w-full  px-6 py-12 border-t">
       <Container className="flex justify-center my-24">
-      <h1>TEST </h1>
+        <div className="flex  justify-between flex-row justify-center mg-12">
+        <Minter/>
+        <Streamer/>
+      </div>
       </Container>
       </div>
 

@@ -74,13 +74,13 @@ const Minter = () => {
   if (loading) return <div>Loading...</div>
 
   return (
-    <div className="w-full">
+    <div className="w-full m-8 ">
       <form
         className="bg-white rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-4">
-          <h1 className="font-semibold mb-2 text-xl leading-tight sm:leading-normal">
+          <h1 className="font-semibold text-gray-700 mb-2 text-xl leading-tight sm:leading-normal">
             Simple Minter
           </h1>
         </div>
