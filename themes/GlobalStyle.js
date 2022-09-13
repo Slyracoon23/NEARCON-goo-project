@@ -1,5 +1,3 @@
-
-
 const GlobalStyle = `
 @font-face {
   font-family: 'Satoshi';
@@ -94,22 +92,6 @@ input {
     outline: none;
     border: #8300d0 2px solid;
   }
-}
-`
+}`
 
-const MintPage = () => {
-    return (
-        <>
-         {/* <GlobalStyle/> */}
-        <div>
-            <h1> Mint Pages</h1>
-        </div>
-        <style jsx global>{
-     GlobalStyle
-      }</style> 
-        </>
-    )
-
-}
-
-export default MintPage;
+export default GlobalStyle
