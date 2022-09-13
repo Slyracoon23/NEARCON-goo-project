@@ -1,4 +1,6 @@
 
+import Minter from '../components/Minter';
+import Card from '../components/Card';
 
 const GlobalStyle = `
 @font-face {
@@ -64,7 +66,7 @@ h1, h2, h3, h4, b {
   font-family: 'Clash Display', sans-serif';
   font-weight: 600;
   margin: .4em 0;
-  z-index: 1;
+  color: white;
 }
 p {
   margin: 0.3em 0;
@@ -130,6 +132,8 @@ const MintPage = () => {
         <>
          {/* <GlobalStyle/> */}
         <h1> Mint Pages</h1>
+        <Minter />
+        <Card title="Mint" description="Description" />
         <style jsx global>{
      GlobalStyle
       }</style> 
