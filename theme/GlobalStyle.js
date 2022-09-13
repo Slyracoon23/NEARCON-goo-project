@@ -1,9 +1,6 @@
-import Navbar from './Navbar'
+import { createGlobalStyle } from 'styled-components'
 
-import { createGlobalStyle } from 'styled-components';
-
-
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
   @font-face {
     font-family: 'Satoshi';
     src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KUT/7QYRJOI3JIMYHGY6CH7SOIFRQLZOLNJ6/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.woff2') format('woff2'),
@@ -53,18 +50,18 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     background: black;
-    background: linear-gradient(140deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 50%, rgba(76,13,113,1) 100%);
+    background: ${(p) => p.theme.background};
     background-attachment: fixed;
     min-height: 100vh;
   }
   body {
     margin: 0;
-    font-family: 'Satoshi', sans-serif';
-    color: '#eee';
+    font-family: ${(p) => p.theme.font};
+    color: ${(p) => p.theme.text};
     letter-spacing: 0.02em;
   }
   h1, h2, h3, h4, b {
-    font-family: 'Clash Display', sans-serif';
+    font-family: ${(p) => p.theme.displayFont};
     font-weight: 600;
     margin: .4em 0;
   }
@@ -77,23 +74,23 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: #8c20c6;
+    color: ${(p) => p.theme.primary};
     transition: all 50ms ease-in-out;
     &:hover {
-      color: #a100ff;
+      color: ${(p) => p.theme.primaryHover};
     }
   }
   input {
     padding: 0.4em 0.5em;
     box-sizing: border-box;
     border-radius: 6px;
-    background: '#eeeeee18';
+    background: ${(p) => p.theme.lightBackground};
     border: #00000000 2px solid;
     color: white;
-    font-family: Satoshi', sans-serif;
+    font-family: ${(p) => p.theme.font};
     &:focus{
       outline: none;
-      border: #8300d0 2px solid;
+      border: ${(p) => p.theme.border};
     }
   }
   .plyr--video {
@@ -122,20 +119,3 @@ const GlobalStyle = createGlobalStyle`
     display: none !important;
   }
 `
-
-const Base = ({ children }: { children: JSX.Element }) => {
-  return (
-    <>
-    <GlobalStyle/>
-    <div >
-      {/* <Navbar></Navbar> */}
-      <div className="flex flex-col justify-between min-h-screen">
-        <main>{children}</main>
-      </div>
-    </div>
-    </>
-  )
-}
-
-export default Base
-
