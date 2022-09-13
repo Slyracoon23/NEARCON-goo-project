@@ -1,7 +1,3 @@
-
-import Minter from '../components/Minter';
-import Card from '../components/Card';
-
 const GlobalStyle = `
 @font-face {
   font-family: 'Satoshi';
@@ -66,10 +62,7 @@ h1, h2, h3, h4, b {
   font-family: 'Clash Display', sans-serif';
   font-weight: 600;
   margin: .4em 0;
-<<<<<<< HEAD
-=======
   z-index: 1;
->>>>>>> main_page
   color: white;
 }
 p {
@@ -99,28 +92,6 @@ input {
     outline: none;
     border: #8300d0 2px solid;
   }
-}
-`
+}`
 
-const MintPage = () => {
-    return (
-        <>
-         {/* <GlobalStyle/> */}
-<<<<<<< HEAD
-        <h1> Mint Pages</h1>
-        <Minter />
-        <Card title="Mint" description="Description" />
-=======
-        <div>
-            <h1> Mint Pages</h1>
-        </div>
->>>>>>> main_page
-        <style jsx global>{
-     GlobalStyle
-      }</style> 
-        </>
-    )
-
-}
-
-export default MintPage;
+export default GlobalStyle
