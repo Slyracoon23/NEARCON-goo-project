@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.21",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@roketo/sdk": "0.2.8",
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "^1.6.6",
@@ -28,6 +31,7 @@
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.13.0",
     "react-jinke-music-player": "^4.24.1",
+    "styled-components": "^5.3.5",
     "subscriptions-transport-ws": "^0.9.19"
   },
   "devDependencies": {
