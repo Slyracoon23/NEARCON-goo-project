@@ -17,7 +17,8 @@ import {
   ConnectedWalletAccount,
   Near,
   keyStores,
-  connect
+  connect,
+  transactions
 } from 'near-api-js';
 
 import { initApiControl } from '@roketo/sdk';
