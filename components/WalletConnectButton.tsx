@@ -1,12 +1,14 @@
 import { EState, MbButton } from 'mintbase-ui'
 import { useWallet } from '../services/providers/MintbaseWalletContext'
 
+
 const WalletConnectButton = () => {
   const { wallet, isConnected, details } = useWallet()
 
   return (
+    <>
     <MbButton
-      label={isConnected ? `Disconnect ${details.accountId}` : 'Connect NEAR wallet'}
+      label={isConnected ? `Disconnect ${details.accountId}` : 'Welcome to DAO Stream'}
       state={EState.ACTIVE}
       onClick={
         isConnected
@@ -19,6 +21,7 @@ const WalletConnectButton = () => {
             }
       }
     />
+ </>
   )
 }
 
