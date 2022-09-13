@@ -208,13 +208,14 @@ const Home = () => {
 
     //  setContract(contract);
 
-    debugger;
 
 
       const fishContract = new Contract(account, fishTokenAccountId, {
         viewMethods: ['ft_balance_of', 'ft_metadata', 'storage_balance_of'],
         changeMethods: ['ft_transfer_call', 'storage_deposit', 'near_deposit'],
       }) as FTContract;
+
+
 
       await createStream({
         comment: '',
