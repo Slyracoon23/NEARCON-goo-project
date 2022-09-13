@@ -126,4 +126,4 @@ const Products = ({ storeId }: { storeId: string }) => {
   )
 }
 
-export default Products
+export { Products, NFT}

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import Navbar from '../components/Navbar'
+import {NFT} from '../components/Products'
 
 
 import { useEffect, useState } from 'react';
@@ -24,6 +25,7 @@ import {
 } from 'near-api-js';
 
 import { initApiControl } from '@roketo/sdk';
+
 
 
 import { getIncomingStreams, createStream } from '@roketo/sdk';
@@ -371,7 +373,34 @@ const Home = () => {
       </Head>
 
       <Navbar/>
-      <Hero  image={NearCon}/>
+
+      {/* MEMBERSHIP  Component */}
+      {/* <div className="w-full  px-6 py-12 bg-gray-100 border-t">
+        <>
+          <h1 className="text-center text-xl text-gray-600 md:text-4xl px-6 py-12">
+            Members
+          </h1>
+          <div className="container max-w-8xl mx-auto pb-10 flex flex-wrap">
+            <NFT tile="Test" media={defaultCat}/>
+            </div>
+        </>
+    </div> */}
+
+
+      {/* <Hero  image={NearCon}/> */}
+
+
+
+      <Container className="flex justify-center my-24">
+      <h1>TEST </h1>
+      </Container>
+      <Container className="flex justify-center my-24">
+      <h1>TEST </h1>
+      </Container>
+      <Container className="flex justify-center my-24">
+      <h1>TEST </h1>
+      </Container>
+      
     
       {/* <Container className="flex justify-center my-24">
 
